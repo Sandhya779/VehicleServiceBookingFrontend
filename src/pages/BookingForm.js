@@ -23,7 +23,7 @@ const ServiceBookingForm = () => {
 
   // Fetch subservices from API
   useEffect(() => {
-    fetch("http://localhost:5002/api/SubServices")
+    fetch("http://localhost:5136/api/SubServices")
       .then((res) => res.json())
       .then((data) => setSubServices(data))
       .catch((err) => console.error("Error fetching sub-services:", err));

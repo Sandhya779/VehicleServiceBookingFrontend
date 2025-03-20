@@ -41,7 +41,7 @@ const SignUp = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:5002/api/Users", user);
+      const response = await axios.post("http://localhost:5136/api/Users", user);
       console.log(response.data);
       alert("SignUp successful!!");
       setUser({
@@ -51,7 +51,7 @@ const SignUp = () => {
         email: "",
         password: "",
       });
-      navigate("/Home");
+      navigate("/login");
     } catch (error) {
       alert("SignUp failed!!");
     }

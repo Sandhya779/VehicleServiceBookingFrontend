@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     try {
       //http://localhost:5002/api/Users
-      const response = await axios.post("http://localhost:5002/api/JWTPostUserDetailsApi/PostLoginDetails", {
+      const response = await axios.post("http://localhost:5136/api/JWTPostUserDetailsApi/PostLoginDetails", {
         RoleId:roleId,
         EmailId:user.email,
         Password:user.password,

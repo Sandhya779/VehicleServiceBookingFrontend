@@ -14,7 +14,7 @@ const ServiceBooking = () => {
   useEffect(() => {
     const fetchBookingData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5002/api/ServiceBookings/${id}`);
+        const response = await axios.get(`http://localhost:5136/api/ServiceBookings/${id}`);
         setBookingDetails(response.data);
         console.log(response.data);
         setLoading(false);

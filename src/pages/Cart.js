@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
+
 const Cart = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,9 +26,13 @@ const Cart = () => {
   const handleConfirmBooking = async () => {
     const userData = JSON.parse(localStorage.getItem("user"));
     const token = userData?.accessToken;
-
+    
+    navigate("/history");
     if (!userData || !token) {
       alert("User is not logged in!");
+      
+        
+      
       return;
     }
 
@@ -41,10 +46,10 @@ const Cart = () => {
     const storeId = parseInt(storedBookingDetails.storeId, 10);
     const statusId = parseInt(storedBookingDetails.statusId || 1, 10); // Default status = 1 (Pending)
 
-    if (!userId || !storeId || !storedBookingDetails.vehicleDetails) {
-      alert("Please provide all required details: Store, Vehicle, and User.");
-      return;
-    }
+    // if (!userId || !storeId || !storedBookingDetails.vehicleDetails) {
+    //   alert("Please provide all required details: Store, Vehicle, and User.");
+    //   return;
+    // }
 
     // Creating final booking payload
     const bookingPayload = {
@@ -63,7 +68,7 @@ const Cart = () => {
     console.log("Final Payload:", bookingPayload);
 
     try {
-      const response = await fetch("http://localhost:5002/api/ServiceBookings", {
+      const response = await fetch("http://localhost:5136/api/StoreBookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,9 +82,6 @@ const Cart = () => {
       if (response.ok) {
         alert("Booking confirmed!");
         navigate("/history");
-      } else {
-        console.error("Server Error:", data);
-        alert(`Error: ${data.title || "Bad Request"}`);
       }
     } catch (error) {
       console.error("Fetch Error:", error);
