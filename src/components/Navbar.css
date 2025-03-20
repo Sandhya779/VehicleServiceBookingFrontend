@@ -1,0 +1,110 @@
+/* Navbar Container */
+.custom-navbar {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; /* Navbar background */
+    background-position: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is above all other elements */
+}
+
+/* Logo Styling */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-project-name {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Navbar Items */
+.nav-item {
+    color: black !important;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+    color: #007bff !important; /* Blue hover effect */
+}
+
+/* Custom Dropdown Styling */
+.nav-dropdown .dropdown-toggle {
+    background-color: transparent !important;
+    border: none !important;
+    font-weight: bold;
+    color: black !important;
+}
+
+.nav-dropdown .dropdown-toggle:hover {
+    color: #007bff !important;
+}
+
+.nav-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown .dropdown-item {
+    font-size: 14px;
+    padding: 8px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-dropdown .dropdown-item:hover {
+    background-color: #007bff !important;
+    color: white !important;
+}
+
+/* Sign Up Button */
+.signup-link {
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: black !important;
+    font-weight: bold;
+}
+.custom-navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    position: sticky !important;
+    width: 100% !important;
+    top: 0;
+    left: 0;
+}

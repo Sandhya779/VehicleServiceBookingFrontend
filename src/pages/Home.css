@@ -1,0 +1,44 @@
+.home-content {
+    padding: 20px;
+    margin-top:70px;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .carousel-inner {
+    padding: 1em;
+  }
+  
+  section {
+    margin-top: 20px;
+  }
+  
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  section p {
+    font-size: 16px;
+  }

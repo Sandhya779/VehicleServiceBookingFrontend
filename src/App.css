@@ -1,0 +1,22 @@
+body {
+  /* background-image: url('./assets/images/nine.jpeg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
